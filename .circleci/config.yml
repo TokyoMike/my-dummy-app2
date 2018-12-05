@@ -22,6 +22,7 @@ jobs:
       - run:
           name: Deploy to EB if branch is Master
           command: |
+            eb init
             eb use my-dummy-app --profile eb-cli
             eb deploy -v --staged --profile eb-cli
  
